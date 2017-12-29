@@ -143,4 +143,20 @@ class TicTacToe
     end
   end
 
+  def winner
+    who_won = won?
+
+    if who_won == false
+      return nil
+    else
+      index = who_won[0]
+
+      if @board[index] == "X"
+        return "X"
+      else
+        return "O"
+      end
+    end
+  end
+
 end
